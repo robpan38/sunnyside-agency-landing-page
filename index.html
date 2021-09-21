@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital,wght@0,900;1,700&display=swap" rel="stylesheet">
+  <script src="index.js"></script>
+  <script>
+    let int = self.setInterval(handleMenuOpacityDesktopVersion, 50);
+  </script>
 
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 </head>
@@ -21,8 +25,10 @@
         <p>Services</p>
         <p>Projects</p>
         <p class="contact">Contact</p>
+        <p class="dropdownArrow"></p>
+        <p class="opacityCount" style="display: none !important;">0</p>
       </div>
-      <div class="menuIcon"></div>
+      <div class="menuIcon" onclick="handleMenuClick()"></div>
     </div>
 
     <p class="heading">We are creatives</p>

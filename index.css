@@ -90,6 +90,12 @@ header {
     border-radius: 25px;
 }
 
+.contact:hover {
+    background-color: hsl(211, 82%, 78%);
+    color: white !important;
+    cursor: pointer;
+}
+
 .heading {
     font-size: max(2vw, 2.5vw, 3vw);
     font-family: var(--font2, 'serif');
@@ -157,6 +163,10 @@ header {
     color: var(--veryDarkDesaturatedBlue);
     position: absolute;
     z-index: 2;
+}
+
+.textWrapper .learnmore p:hover {
+    cursor: pointer;
 }
 
 .textWrapper .learnmore div {
@@ -361,6 +371,11 @@ footer {
     color: var(--footerColor);
 }
 
+.menu2 p:hover {
+    cursor: pointer;
+    color: white;
+}
+
 .icons {
     height: 7%;
     display: flex;
@@ -373,17 +388,64 @@ footer {
     height: 100%;
 }
 
-@media screen and (max-width: 1000px) {
+.icons img:hover {
+    cursor: pointer;
+    color: white;
+    filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+
+@media screen and (max-width: 800px) {
     html, body {
-        height: 225%;
+        height: 215%;
     }
 
     header {
-        height: 10%;
+        height: 15%;
+        background-image: url("images/mobile/image-header.jpg");
+    }
+
+    .arrow {
+        bottom: 20%;
+    }
+
+    .headerWrapper {
+        position: relative;
     }
 
     .menu {
-        display: none;
+        height: 200%;
+        width: 97%;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 40px 0px;
+        row-gap: 20px;
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        color: black;
+        opacity: 0;
+    }
+
+    .dropdownArrow {
+        position: absolute;
+        top: -14px;
+        right: 0;
+        border-width: 7px;
+        border-style: solid;
+        border-color: transparent white white transparent;
+        color: white;
+        opacity: 0;
+    }
+
+    .menu p {
+        font-size: 1rem;
+        color: var(--darkGrayishBlue);
+    }
+
+    .contact {
+        height: 20%;
+        width: 50%;
+        background-color: var(--yellow);
     }
 
     .logo {
@@ -409,10 +471,18 @@ footer {
     }
 
     .transform, .standout {
-        height: 15%;
+        height: 20%;
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    .transform .imageWrapper {
+        background-image: url("images/mobile/image-transform.jpg");
+    }
+    
+    .standout .imageWrapper {
+        background-image: url("images/mobile/image-stand-out.jpg");
     }
 
     .textWrapper {
@@ -450,5 +520,125 @@ footer {
 
     .textWrapper .learnmore p {
         font-size: 0.8rem;
+    }
+
+    .graphic-photo {
+        height: 25%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textWrapper2 {
+        height: 50%;
+        width: 100%;
+    }
+
+    .graphic {
+        background-image: url("images/mobile/image-graphic-design.jpg");
+    }
+    
+    .photo {
+        background-image: url("images/mobile/image-photography.jpg");
+    }
+
+    .textWrapper2 .title2 {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .textWrapper2 .description2 {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .testimonials {
+        height: 28%;
+        row-gap: 0;
+        justify-content: flex-start;
+    }
+
+    .testimonialsHeading {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+
+    .testimonialsWrapper {
+        height: 90%;
+        flex-direction: column;
+        justify-content: flex-start;
+        column-gap: 0;
+        row-gap: 15px;
+    }
+
+    .testimonialWrapper {
+        height: 30%;
+        row-gap: 10px;
+    }
+
+    .testimonialWrapper img {
+        height: 30%;
+        width: 30%;
+    }
+
+    .quote {
+        margin: 1% 0%;
+        font-size: 0.9rem;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+
+    .position {
+        font-size: 0.9rem;
+    }
+
+    .images {
+        height: 20%;
+        flex-direction: column;
+    }
+    
+    .imagesWrapper {
+        height: 50%;
+        width: 100%;
+    }
+
+    .img1 {
+        background-image: url("images/mobile/image-gallery-milkbottles.jpg");
+    }
+    
+    .img2 {
+        background-image: url("images/mobile/image-gallery-orange.jpg");
+    }
+    
+    .img3 {
+        background-image: url("images/mobile/image-gallery-cone.jpg");
+    }
+    
+    .img4 {
+        background-image: url("images/mobile/image-gallery-sugar-cubes.jpg");
+    }
+
+    .footer {
+        height: 10%;
+    }
+
+    .logo2 {
+        height: 15%;
+        width: 50%;
+    }
+
+    .menu2 {
+        column-gap: 10%;
+    }
+
+    .menu2 p {
+        font-size: 1rem;
+    }
+
+    .icons {
+        height: 5%;
     }
 }
